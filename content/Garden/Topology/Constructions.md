@@ -17,8 +17,10 @@ Note that the open subsets on the subspace topology are the intersection of the 
 >[!defn] Definition (Open cover)
 >A collection $(A_{i})_{i\in I}$ of open subsets of a topological space $X$ is called an open cover if $\bigcup\limits_{i\in I}A_{i}=X$.
 
+^9ca89c
+
 >[!theo] Theorem (Continuity from covers)
->Let $f:X\to Y$ be a map, $(A_{i})_{i\in I}$ an open cover of $X$. Then, $f$ is continuous if and only if $f_{i}=f|_{A_{i}}$ is continuous $\forall i\in I$.
+>Let $f:X\to Y$ be a map, $(A_{i})_{i\in I}$ an [[Constructions#^9ca89c|open cover]] of $X$. Then, $f$ is continuous if and only if $f_{i}=f|_{A_{i}}$ is continuous $\forall i\in I$.
 
 ^5a77e0
 

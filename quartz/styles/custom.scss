@@ -96,8 +96,8 @@ body {
 
 .callout {
     &[data-callout="proof"] {
-        --color: rgb(0, 0, 0);  // Converted the RGB value
-        --border: rgb(0, 0, 0);  // Converted the RGB value
+        --color: (--callout-content-color);  // Converted the RGB value
+        --border: gray;  // Converted the RGB value
          // Using the same color for border
         --bg: rgba(255, 255, 255, 0);            // Custom background color placeholder
         --callout-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sticky-note'><path d='M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z'/><path d='M15 3v4a2 2 0 0 0 2 2h4'/></svg>");
@@ -123,3 +123,12 @@ body {
     padding-right: 1em;
 }
 
+.mark {
+    background-color: #FFB8EB; // Light pink background
+    padding: 0.1em 0.2em; // Adjust padding to your preference
+    border-radius: 0.2em; // Rounded corners for a smoother look
+  }
+  
+  .mark-custom::selection {
+    background-color: #FFB8EB; // Ensures selection color matches highlight
+  }
