@@ -15,10 +15,10 @@ We will start defining a principal bundle to better understand the more complex 
  > Let $G$ be a topological group. A principal $G$-bundle consists of a continuous function $p:P\to X$ and a continuous right action $P\times G\to P$ such that there is an open cover $\mathcal{U}=\{U_\alpha\}_{\alpha\in I}$ of $X$ together with homeomorphisms $\psi_\alpha: U_\alpha\times G\to p^{-1}(U_\alpha)$ that satisfy:
  > - The following diagram is commutative:
  > 
-><!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJVX1xcYWxwaGFcXHRpbWVzIEciXSxbMywwLCJwXnstMX0oVV9cXGFscGhhKSJdLFszLDIsIlVfXFxhbHBoYSJdLFswLDEsIlxccHNpX1xcYWxwaGEiXSxbMSwyLCJwfCJdLFswLDIsIlxccGkiLDJdXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJVX1xcYWxwaGFcXHRpbWVzIEciXSxbMywwLCJwXnstMX0oVV9cXGFscGhhKSJdLFszLDIsIlVfXFxhbHBoYSJdLFswLDEsIlxccHNpX1xcYWxwaGEiXSxbMSwyLCJwfCJdLFswLDIsIlxccGkiLDJdXQ==&embed" width="330" height="250" ></iframe>
+><!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJVX1xcYWxwaGFcXHRpbWVzIEciXSxbMiwwLCJwXnstMX0oVV9cXGFscGhhKSJdLFsyLDEsIlgiXSxbMCwxLCJcXHBzaV9cXGFscGhhIl0sWzEsMiwicHwiXSxbMCwyLCJcXHBpIiwyXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJVX1xcYWxwaGFcXHRpbWVzIEciXSxbMiwwLCJwXnstMX0oVV9cXGFscGhhKSJdLFsyLDEsIlgiXSxbMCwxLCJcXHBzaV9cXGFscGhhIl0sWzEsMiwicHwiXSxbMCwyLCJcXHBpIiwyXV0=&embed" width="350" height="200" style="border-radius: 8px; border: none;"></iframe>
 >- $\psi_\alpha(x,g)=\psi_\alpha(x,e) g$ with the identity $e\in G$ and $g\in G$.
 
-The open cover and the homeomorphisms $\psi_\alpha$ are called the \emph{local trivialization} and are generally not unique.
+The open cover and the homeomorphisms $\psi_\alpha$ are called the *local trivialization* and are generally not unique.
 
 A simple example is the product principal $G$ bundle or simply the trivial principal bundle.
 
