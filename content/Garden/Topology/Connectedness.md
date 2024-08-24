@@ -1,3 +1,10 @@
+---
+title: Connectedness
+draft: false
+tags:
+  - Pure_Mathematics
+---
+
 What is a good way to formalize the idea of connectedness?
 >[!defn] Definition (Connected space)
 >A topological space $X$ is connected if the only subsets that are both open and closed are $\emptyset$ and $X$ itself.
@@ -29,6 +36,8 @@ What is a good way to formalize the idea of connectedness?
 
 >[!prop] Proposition (Unions of overlapping connected sets)
 >Let $(A_{i})_{i\in I}$ be a cover of $X$ by connected subsets. If there is $j\in I$ with $A_{i}\cap A_{j}\neq \emptyset$, $\forall i\in I$, then $X$ is connected.
+
+^fc2a59
 
 ^48eb8f
 >[!proof]- 
@@ -84,15 +93,50 @@ What is a good way to formalize the idea of connectedness?
  >
 >$(\impliedby)$ Suppose that $X$ and $Y$ are connected. Consider any two points $(x,y),(\hat{x},\hat{y})\in X\times Y$. The subspaces $\{ x \}\times Y\cong Y$ and $X\times \{ \hat{y} \}\cong X$ are connected. The point $(x,\hat{y})$ is an element of both spaces. Then, $X\times \{ \hat{y} \}\cap \{ x \}\times Y\neq \emptyset$. Hence, $X\times \{ \hat{y} \}\cup \{ x \}\times Y\neq \emptyset$ is connected, and it contains both $(x,y)$ and $(\hat{x},\hat{y})$. Moreover, the same is true for the [[Connectedness#^d874d5|connected component]] of this subset. Therefore, any point in $X\times Y$ lies in the same connected component, and since the connected components [[Connectedness#^d874d5|form a partition]], $X\times Y$ must be equal to this component. Therefore, $X\times Y$ is connected.
 
+>[!theo] Theorem (Connectedness of arbitrary products)
+>Let $\{ X_{i} \}_{i\in I}$ be a family of non-empty topological spaces. Then, $\prod\limits_{i\in I}X_{i}$ is connected iff all $X_{i}$ are connected.
+
+>[!proof]- 
+ >$(\implies)$ Suppose that $\prod_{i\in I}X_{i}$ is connected. Now, consider the projection maps $\text{pr}_{i}:\prod_{i\in I}X_{i}\to X_{i}$. Since, each $\text{pr}_{i}$ is continuous and surjective, $\mathrm{Im}(\text{pr}_{i})=X_{i}$ [[Connectedness#^a89d81|is connected]] for all $i\in I$.
+ >
+ >$(\impliedby)$ Suppose that all $X_{i}$ are connected. The idea is to prove that there is a connected subspace that is [[Concepts#^6145f4 |dense]], then $\prod_{i\in I}X_{i}$ will be connected. Fix the component $\hat{x}_{i}\in X_{i}$ for all $i\in I$, and for $J\subseteq I$finite, consider the following:
+ >$$
+ >Y_{J}=\left\{  (x_{i})_{i\in I}\in \prod\limits_{i\in I}X_{i}\biggr|\text{pr}_{j}((x_{i})_{i\in I})=\hat{x}_{j}, \forall j\in I \setminus J  \right\}.
+ >$$
+ >Then, 
+ > $$
+> Y_{J}\cong\prod\limits_{j\in I \setminus J}\{ \hat{x}_{i} \}\times \prod\limits_{j\in J}X_{j}\subseteq \prod\limits_{i\in I}X_{i}
+>$$
+>Therefore, since $J$ is finite, $\prod_{j\in J}X_{j}$ is connected. Now, consider $Y=\bigcup_{J\subseteq I}Y_{J}$. Let's see if it's connected and dense. First, $Y$ is connected. Indeed, by definition, the point $(\hat{x}_{i})_{i\in I}\in \bigcap_{J\subseteq I}Y_{J}$. Then, $Y$ [[Connectedness#^fc2a59|is connected]] since each $Y_{J}$ are connected. Lastly, let us prove that $Y$ is dense. Indeed, consider the point $x\in \prod_{i\in I}X_{i}$ and let $V\in \mathcal{N}_{x}$. Then, there is $U\subseteq V$ open set. Hence, $U=\prod_{i\in I}U_{i}$ with $U_{k}=X_{k}$ for $k\in I \setminus K$, $K\subseteq I$ finite. Thus, the point $(\bar{x}_{j})_{j\in i}\in U$ defined as
+> $$
+> \bar{x}_{j}=\begin{cases}
+>x_{j} &\text{if } j\in K,\\
+>\hat{x}_{j} &\text{if }j\in I \setminus K
+>\end{cases}
+>$$
+>where $x_{j}\in U_{j}$ with $j\in K$. Hence, $(\bar{x}_{j})_{j\in I}\in Y$, i.e., $Y_{j}\cap V\neq \emptyset$ or $Y\cap V$. Since, $V$ was an arbitrary neighborhood of an arbitrary point of $\prod_{i\in I}X_{i}$, we have $\overline{Y}=X$. Therefore, $\prod_{i\in I}X_{i}$ is connected.
+
 >[!defn] Definition (Totally disconnected)
 >A topological space $X$ such that all singletons $\{ x \}_{x\in X}$ are connected components is called totally disconnected.
 
+>[!lemma] Lemma (Finitely many components sum)
+ > If $X$ has finitely many component components, then they are open, and $X$ is their topological sum.
+ 
+ >[!proof]-
+>Each component is the complement of the union of finitely many other components. These are closed. By DeMorgan's Law, the complement of a union is the intersection of complements. Thus, each component is the intersection of finitely many open sets, and hence itself is open.
 
+---
+### Paths and Path Connectedness
+
+>[!defn] Definition (Path connected, path component)
+>- A path in a space $X$ is a continuous map $[a,b]\subseteq \mathbb{R}\to X$
+>- $X$ is path connected if for every $x,y\in X$ there exists a path $\gamma:[a,b]\to  X$ such that $\gamma(a)=x, \gamma(b)=y$. We write $\gamma:x\leadsto y$.
+>- The path component of $x\in X$ is the set of all $y\in X$ such that there exists $\gamma:x\leadsto y$.
+ > 
+ 
+ 
 
   
-
-
-
 
 
 

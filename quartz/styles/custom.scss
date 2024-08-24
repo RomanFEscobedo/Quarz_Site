@@ -5,6 +5,7 @@ body {
     text-align: justify;
 }
 
+
 .callout {
     &[data-callout="theo"] {
       --color: rgb(79, 27, 191);  // Converted the RGB value
@@ -115,9 +116,6 @@ body {
     }
 }
 
-
-
-
 .callout-content {
     padding-left: 1.2em;
     padding-right: 1em;
@@ -131,4 +129,12 @@ body {
   
   .mark-custom::selection {
     background-color: #FFB8EB; // Ensures selection color matches highlight
+  }
+
+  .quiver-embed {
+    display: block; /* block or flex is fine for this approach */
+    margin: 0 auto;
+    border-radius: 8px;
+    border: none;
+    color: "#F2EADF";
   }

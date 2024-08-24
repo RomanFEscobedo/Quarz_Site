@@ -1,3 +1,10 @@
+---
+title: Constructions
+draft: false
+tags:
+  - Pure_Mathematics
+---
+
 We will always begin with an initial space $(X,\mathcal{O})$. What would be the natural topology to consider in a subset $A\subseteq X$.
 
 >[!defn] Definition (Subspace Topology)
