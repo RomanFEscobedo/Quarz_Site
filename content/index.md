@@ -11,7 +11,7 @@ However, I am also passionate about more practical topics like Topological and G
 
 
 >[!rem] Garden 🪴
->I started a[[What is a Digital Garden?| garden project]] where I published several parts of my notes on different topics. If you are interested in consulting them, you can find them [[Garden|here]].
+>I started a [[What is a Digital Garden?| garden project]] where I published several parts of my notes on different topics. If you are interested in consulting them, you can find them [[Garden|here]].
  
 
 #### Contact
