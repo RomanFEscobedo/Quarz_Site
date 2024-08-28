@@ -6,7 +6,8 @@ tags:
 ---
 These notes are not of my authorship; I added several extra comments or results, but they are part of a course I took at TUM. The authorship must be given to Prof. Ulrich Bauer since they are mainly extracts of their slides on the topic. Here, you can find the topics covered by the notes.
 ### Index
-- [[Constructions|Constructions]] ^d0bed5
+- [[Concepts|Topological spaces and basic concepts]]
+- [[Constructions|Constructions of Topological Spaces]] ^d0bed5
 - [[Connectedness|Connectedness]] 
 
 If you want to go further, you can look at the following bibliography:

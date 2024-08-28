@@ -36,16 +36,15 @@ What is a good way to formalize the idea of connectedness?
 
 >[!prop] Proposition (Unions of overlapping connected sets)
 >Let $(A_{i})_{i\in I}$ be a cover of $X$ by connected subsets. If there is $j\in I$ with $A_{i}\cap A_{j}\neq \emptyset$, $\forall i\in I$, then $X$ is connected.
-
 ^fc2a59
 
-^48eb8f
 >[!proof]- 
  >Let $f:X\to \{ 0,1 \}$ be a continuous map. According to the [[Connectedness#^198a53|previous result]], $X$ will be connected if and only if any continuous map to a discrete space is constant. Then, since each $A_{i}$ is connected, $f|_{A_{i}}:A_{i}\to \{ 0,1 \}$ is constant for all $i \in I$, so $f$ is constant on $X$. Note that this is possible since all cover elements share a common at least one point. Thus, $X$ is connected.
 
 ---
 ### Intervals
->[!prop] Proposition (Intervals are the  connected subsets of $\mathbb{R}$.)
+>[!prop] Proposition (Intervals are the connected subsets of the real line)
+ > 
 >A subset $A\subseteq \mathbb{R}$ is connected if and only if it is an interval.
 
 >[!proof]- 
@@ -63,10 +62,10 @@ What is a good way to formalize the idea of connectedness?
 
 ---
 ### Connectivity and Closure
->[!theo] Theorem (Connected sets have connected closure)
+>[!theo] Theorem (Connected sets have connected closure) ^2284f
 >If $A\subseteq X$ is connected, then its closure $\bar{A}$ is connected. More generally, any $B$ with $A\subseteq B\subseteq \bar{A}$ is connected.
 
-^2284f0
+
 >[!proof]- 
  >Assume $B=B_{1}+B_{2}$. Note that $B_{1},B_{2}$ are open in $B$ %%put the reference to the definition of the topology%%. This means that there are open sets $U_{1},U_{2}\in X$ such that $B_{1}=B\cap U_{1}$ and $B_{2}=B\cap U_{2}$. Restricting to $A$, we also get $A=U_{1}\cap A+U_{2}\cap A$. Since $A$ is connected, we can assume without loss of generality that $U_{1}\cap A=\emptyset$. Then, $X\setminus U_{1}$ is a closed set containing $A$. Recall that $\bar{A}$ is the smallest closed set containing $A$ %%add a link to a proof%%. Hence, by hypothesis, $B\subseteq \bar{A}\subseteq X\setminus U_{1}$. Therefore, $B_{1}=B\cap U_{1}=\emptyset$. Thus, $B$ is connected.
 
@@ -75,11 +74,13 @@ What is a good way to formalize the idea of connectedness?
 >[!defn] Definition (Connected component) 
 >The union of all connected subsets $A\subseteq X$ with $x\in A$ is called the connected component of $x$ in $X$.
 
+^b88834
+
 >[!rem] Remark
->- Since all  the connected subsets share $x$ as a common point, the connected component is connected and [[Connectedness#^2284f0|closed]]. 
+>- Since all  the connected subsets share $x$ as a common point, the connected component is connected and [[Connectedness#^2284f|closed]]. 
 >- The connected components form a partition of $X$.
 >	- The singleton is connected, and then a connected component always exists.
->	- The connected components must be disjoint. Indeed, let $P,Q$ be two different connected components such that $P\cap Q\neq \emptyset$. Since they are connected, $P\cup Q$ [[Connectedness#^48eb8f|is connected]], too. Hence, $P\cup Q$ is the connected component since $P\subseteq P\cup Q$ and $Q\subseteq P\cup Q$.
+>	- The connected components must be disjoint. Indeed, let $P,Q$ be two different connected components such that $P\cap Q\neq \emptyset$. Since they are connected, $P\cup Q$ [[Connectedness#^fc2a59|is connected]], too. Hence, $P\cup Q$ is the connected component since $P\subseteq P\cup Q$ and $Q\subseteq P\cup Q$.
 >- Two points $x,y\in X$ are in the same component if and only if both are contained in the same connected set.
 >-  Thus, for a connected subset $A\subseteq X$, we can also talk about the connected component of $A$.
 
@@ -134,8 +135,44 @@ What is a good way to formalize the idea of connectedness?
 >- The path component of $x\in X$ is the set of all $y\in X$ such that there exists $\gamma:x\leadsto y$.
  > 
  
- 
+ >[!theo] Theorem (Path connected implies connected)
+ >
+ >Any path-connected space $X$ is connected.
+ >
 
+^75b65c
+
+>[!proof]- 
+ >Suppose that $X$ is path connected, but $X=A+B$ with $x\in A,y\in B$. As $X$ is path connected, there is a path $\gamma:[0,1]\to X$, $x\leadsto y$. But $\gamma^{-1}(A)\sqcup\gamma^{-1}(B)=\gamma^{-1}(X)=[0,1]$. Both, $\gamma^{-1}(A),\gamma^{-1}(B)$ are non-empty and also open, by continuity of $\gamma$. But, then $[0,1]=\gamma^{-1}(A)+\gamma^{-1}(B)$, which cannot be.
+
+---
+### Local Notions of Connectedness
+
+>[!defn] Definition (Locally (path-)connected)
+ >A topological space $X$ is locally (path-)connected if for all $x\in X$, every neighborhood of $x$ contains a (path-)connected open neighborhood of $x$ as a subset.
+ >
+
+>[!rem] Remark 
+>Equivalently:
+>- For all $x\in X$, the (path-)connected open neighborhoods of $x$ form a [[Concepts#^f76270|neighborhood basis]] of $x$.
+>- The (path-)connected open sets form a basis of $X$.
+
+ >[!theo] Theorem (Locally connected spaces have open components)
+ >
+ >Any (path-)component of a locally (path-)connected space is open.
+
+>[!proof]- 
+ >Let $K$ be a (path-)component of $x\in X$. Let $V$ be a (path-)connected open neighborhood of $y\in K$. Both $V$ and $K$ are (path-)connected and [[Connectedness#^d874d5|contain the point]] $y$. Then, $V\cup K$ is also (path-)connected and contains the point $y$. [[Connectedness#^b88834|Thus]], $V\subseteq K$, and $K$ is also a neighborhood of $y$.Therefore, $K$ is open.
+
+>[!theo] Theorem (From local to global path connected)
+>Let $X$ be locally path connected. 
+>- Then, for any every $x\in X$, the connected component of $x$ is its path component.
+>- In particular, $X$ is connected if and only if its path connected.
+
+>[!proof]- 
+ > Let $K$ be the connected component of $x$, and $P$ its path component. [[Connectedness#^75b65c|Then]], $P\subseteq K$. Consider $Q=K\setminus P\neq \emptyset$. Thus, $Q$ is the union of its path components, which are open sets (look to the previous result). Hence, $Q$ and $P$ are open, disjoint, and cover $K$, i.e., $K=Q+P$. This cannot be, then $Q=\emptyset$. We conclude that $K=P$.
+ 
+ 
   
 
 
