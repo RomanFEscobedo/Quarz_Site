@@ -17,6 +17,7 @@ section {
   background-color: var(--light);
   font-family: var(--bodyFont);
   color: var(--darkgray);
+  font-size: large;
 }
 
 .text-highlight {
@@ -63,6 +64,8 @@ ul,
     text-align: center;
   }
 }
+
+
 
 strong {
   font-weight: $semiBoldWeight;
@@ -537,10 +540,15 @@ ol.overflow {
   }
 }
 
+.katex { font-size: 1em !important; } 
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
+  font-size: 1.1em;
 }
+
+
 
 .external-embed.youtube,
 iframe.pdf {

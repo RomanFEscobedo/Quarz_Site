@@ -13,6 +13,7 @@ We will always begin with an initial space $(X,\mathcal{O})$. What would be the 
 ^85d961
 
 Note that the open subsets on the subspace topology are the intersection of the open sets in $X$. Also, <mark style="background: #FFB8EBA6;">the closed subsets are the intersection of the closed subsets in $X$ with $A$.</mark> 
+
 >[!example]
 >If we have a metric space $(X,d)$ and $A\subseteq X$ we may consider the following:
 >- the space with the metric restricted to $A$, i.e., $(A,d|_{A})$ and the subspace topology. Then, the $\epsilon$-balls in $A$ will be the $\epsilon$-balls in $X$ intersected with $A$.
@@ -23,8 +24,9 @@ Note that the open subsets on the subspace topology are the intersection of the 
 
 >[!defn] Definition (Open cover)
 >A collection $(A_{i})_{i\in I}$ of open subsets of a topological space $X$ is called an open cover if $\bigcup\limits_{i\in I}A_{i}=X$.
-
 ^9ca89c
+
+Similarly we have closed covers where the collection is made of closed subsets of $X$. ^123f5f
 
 >[!theo] Theorem (Continuity from covers)
 >Let $f:X\to Y$ be a map, $(A_{i})_{i\in I}$ an [[Constructions#^9ca89c|open cover]] of $X$. Then, $f$ is continuous if and only if $f_{i}=f|_{A_{i}}$ is continuous $\forall i\in I$.
@@ -69,4 +71,23 @@ As we will see, the main general constructions that we will present have a unive
  >2. The following are equivalent: for any map $g:Z\to Y$ is continuous iff $g^{-1}(V)$ is open for any open subset $V\subseteq Y$ iff $g^{-1}(f^{-1}(U))$ is open for any open subset $U\subseteq X$ iff $f\circ g$ is continuous.
  >3. Let $\mathcal{R,S}$ be two arbitrary topologies on $Y$ satisfying (2). Recall that $id_{Y}:(Y,\mathcal{R})\to(Y,\mathcal{R})$ is continuous. Thus, $f\circ id_{Y}=f:(Y,\mathcal{R})\to(X,\mathcal{O})$ is continuous, too. Consider $g=id_{Y}:(Y,\mathcal{R})\to(Y,S)$. Hence, $f\circ g=f:(Y,\mathcal{R})\to(X,\mathcal{O})$ is continuous. Therefore, $g$ is continuous and $\mathcal{S}\subseteq \mathcal{R}$ %%put the reference to the result%%. Symmetrically, we also get $\mathcal{R}\subseteq \mathcal{S}$.
  
+ >[!defn] Definition (Embedding)
+ >
+ >A continuous map $f:X\to Y$ is an embedding if $f$ is injective and $X$ has the topology induced by $f.$
+ >
+
+>[!rem] Remark (Equivalent definitions for an embedding)
+ >- $f$ is a homeomorphism onto the subspace $\mathrm{Im}f\subseteq Y$.
+ >- $f$ is continuous, injective, and open/closed map onto $\mathrm{Im}f$.
+ 
+ >[!example] Example 
+ >- The curve $\mathbb{R}\to \mathbb{R}^2$ defined as $t\mapsto e^{bt}(\sin t, \cos t)$, with $b\in \mathbb{R}$, is an embedding (logarithmic spiral).
+ >
+ ><img src="/Assets/Spiral-log-a-1-5.svg" width="190" style="display: block; margin: 0 auto;"> 
+ >
+ >- The map $\mathbb{R}^{d}\to S^d\subseteq \mathbb{R}^{d+1}$, defined as
+ > $$
+>x=(x_{1},x_{2},\dots,x_{d})\mapsto \frac{1}{\lVert x \rVert  ^2+1}(2x_{1},2x_{2},\dots,2x_{d},\lVert x \rVert  ^{2}-1)
+> $$
+><img src="/Assets/Screenshot 2024-08-30 at 2.58.48 p.m..png" width="350" style="display: block; margin: 0 auto; margin-bottom: 20px; border-radius: 8px;"> 
  

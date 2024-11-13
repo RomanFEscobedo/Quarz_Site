@@ -34,6 +34,28 @@ tags:
 >A collection $\mathcal{B}_{x}$ of neighborhoods of $x\in X$ is called a neighborhood basis of $x$ if every neighborhood $U$ of $x$ has a subset $B\subseteq U$ with $B\in\mathcal{B}_{x}$.
 ^f76270
 
+>[!example] Example (Neighborhood basis of metric spaces)
+>For any metric space $X$ and $x \in X$, the collection 
+>$$
+>\mathcal{B}_{x}=\{ B_{\frac{1}{n}}(x)|n\in \mathbb{N} \}
+>$$
+> of open balls with radius $1/n$ is a neighborhood basis for $x \in X$.)
+
+^c80f22
+
+>[!rem] Remark 
+ >1. Given a basis $\mathcal{S}$ of $\mathcal{O}$ and $x \in X$, restricting $\mathcal{S}$ to just the basis set containing $x$ yields a neighborhood basis of $x$: 
+ >$$
+>\mathcal{B}_{x}=\{ B\in \mathcal{S}|x \in B \}.
+>$$
+ >2. Given a neighborhood basis $\mathcal{B}_{x}$ for each $x \in X$, their union is a basis for $\mathcal{O}$: 
+ >$$
+>\mathcal{S}=\bigcup\limits_{x \in X}\mathcal{B}_{x}.
+>$$
+
+^25724e
+
+ 
 ---
 ### Interior, Boundary, and Closure
 >[!defn] Definition (Interior/Boundary/Closure/Limit and Isolated point)
@@ -48,8 +70,28 @@ We use the following notation:
 - $\bar{A}$ denotes the **closure** of $A$ (the set of all closure points).
 - $A^\circ$ denotes the **interior** of $A$ (the set of all interior points). 
 - $\partial A$ denotes the **boundary** of $A$ (the set of all boundary points).
-  
+
+>[!prop] Proposition 
+ >Let $X$ be a topological space, $A\subseteq X$ a subset. Then,
+ >- $A^\circ$ open, and it is the maximal open set contained in $A$.
+ >- $\overline{A}$ is closed, and it is the minimal closed set containing $A$.
+ >- $\partial A=\overline{A}\cap \overline{X\setminus A}$.
  
+### Countability and Separability
+>[!defn] Definition (First/Second countable)
+ >A topological space is 
+ >- _First countable_ if every point has a countable neighborhood basis.
+ >- _Second countable_ if it has a countable basis.
+
+^d1501a
+
+ 
+ >[!rem] Remark 
+ >- Euclidean spaces are second countable:
+ > 	- The open balls with radii $\left\{  \frac{1}{n}  \right\}_{n\in \mathbb{N}}$ centered at rational points form a basis.
+ >- Every second countable space is first countable (see [[Concepts#^25724e|remark]]).
+ >- Every metric space is first countable (see [[Concepts#^c80f22|example]]), but not necessarily second countable.
+ > 
 
 >[!defn] Definition (Dense subset) 
  >A subset $A\subseteq X$ of a topological space $X$ is called dense if $\bar{A}=X$ and *nowhere dense* if $(\bar{A})^\circ=\emptyset$.   
