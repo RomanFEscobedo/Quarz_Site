@@ -15,7 +15,6 @@ The tangential bundle of a manifold $M$ is the disjoint union of the tangential 
  >
  >We call $M$ the base manifold, $E$ the total space, $\pi$ the projection, $\pi ^{-1}(p)$ the fiber over $p$, and $\Phi$ bundle chart.
 
-The second condition is equivalent to say that each fiber is a finite dimensional vector space.
 Now, we should define properly the concept of a tangential bundle and prove that is in fact a vector bundle.
 
 >[!defn] Definition (Tangential Bundle)
@@ -35,6 +34,13 @@ Now, we should define properly the concept of a tangential bundle and prove that
  > 4. A smooth section in $TM$ is called tangential vector field on $M$.
  > 5. A vector field along a map $f:M\to N$ is a map $X:M\to TN$ with $\pi \circ X=f$.
  
+ >[!rem] Remark (Derivations)
+ >
+ >Tangential vectors fields are called _derivations_ as well since $X \in \Gamma(TM)$ can be viewed as a map $X:\mathcal{F}(M)\to \mathcal{F}(M)$ which is $\mathbb{R}$-linear and Leibniz. 
+
+>[!example] Example 
+ >- For smooth $f:M\to N$ and $v\in \Gamma(TM)$, the map $df(v):M\to TN$, $p\mapsto d_{p}f(v_{p})\in T_{f(p)}N$ is a vector field along $f$.
+ >- $M\times \mathbb{R}^k$ is a trivial bundle.
  
  
  

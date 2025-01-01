@@ -29,6 +29,7 @@ As mentioned in introducing the concept of manifolds, we want to translate conce
  >- Any finite dimensional $\mathbb{R}$-vector space is isomorphic to $R^n$ by requiring one of the isomorphisms to be a diffeomorphism, we can make them into a manifold as well.
  
  >[!defn] Definition (Ring of smooth functions)
- >$\mathcal{F}(M)$ denotes the (commutative) ring of smooth functions on $M$.
+ >
+ >$\mathcal{F}(M)$ denotes the (commutative) ring of smooth functions on $M$ (that is, the set of smooth real valued functions $f:M\to \mathbb{R}$).
  >
  
