@@ -9,7 +9,7 @@ We will consider two types of convergence on the sequence of functions that lead
 
 >[!defn] Definition (Pointwise Convergence)
  > Suppose that $(f_{n})$ is a sequence of functions $f_{n}:A\to \mathbb{R}$ and $f:A\to \mathbb{R}$. Then, $f_{n}\to f$ pointwise on $A$ if $f_{n}(x)\to f(x)$ as $n\to \infty$ for every $x \in A$.
- > We say that the sequence $(f_{n})$ converges pointwise if it converges pointwise to some function $f$, in which case >
+ > We say that the sequence $(f_{n})$ converges pointwise if it converges pointwise to some function $f$, in which case 
  > $$
 >f(x)=\lim_{ n \to \infty } f_{n}(x).
 >$$

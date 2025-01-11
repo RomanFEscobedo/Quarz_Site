@@ -8,6 +8,7 @@ I am an MSc. in Mathematics student at TU Munich. Nonetheless, I have a BSc. in 
 
 However, I am also passionate about more practical topics like Topological and Geometrical Data Analysis applied in biology, e.g., neuroscience, which can inspire new research directions.
 
+My current [[Curriculum Vitae|Curriculum Vitae (CV) its available online]] (also in [[CV_ENG.pdf|PDF]] if you like).
 
 >[!example] Garden 🪴
 >I started a [[What is a Digital Garden?| garden project]] where I published several parts of my notes on different topics. If you are interested in consulting them, you can find them [[Garden|here]].
